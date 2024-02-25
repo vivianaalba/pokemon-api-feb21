@@ -1,6 +1,6 @@
-import { useSwr } from "swr";
+import useSWR from "swr"
 
-const baseUrl = "https://pokeapi.co/api/v2";
+const baseUrl = "https://pokeapi.co/api/v2/";
 
 export default function useRequest(path, name) {
     if (!path) {
@@ -10,7 +10,7 @@ export default function useRequest(path, name) {
     const url = name ? `${baseUrl}/${path}/${name}?limit=20&offset=20` : `${baseUrl}/${path}`;
 
     // Include `url` in the dependency array
-    const { data, error } = useSwr(url);
+    const { data, error } = useSWR(url);
 
     // Handle errors if needed
     if (error) {
