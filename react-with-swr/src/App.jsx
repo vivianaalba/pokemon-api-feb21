@@ -1,15 +1,60 @@
 import React from "react";
+import "./styles/App.css";
+import PokemonLogo from '../public/images/PokemonLogo.png';
+import useRequest from "./hooks/useRequest";
 
-function App() {
+export default function App() {
+  // section 4.10
+  // const { isLoading, data, error } = useRequest('/pokemon');
+  
+  const DisplayPokemon = () => {
+    if(data) {
+      // ...
+    }
 
+      return (
+        <div>
+          {
+            // <h2>{result.name}</h2>
+            data.results.map((pokemon) => {
+              return (
+                <h2 key={pokemon.name}>{pokemon.name}</h2>
+              );
+            })
+          }
+        </div>
+      );
+  }
+
+  const ErrorHandling = () => {
+    if (isLoading) {
+      return <div>Loading Pokemon data...</div>;
+    } else if (error) {
+      return <div>{error}: There was an error with getting data</div>;
+    } else {
+      return null; // Return null if neither loading nor error
+    }
+  };
+  
   return (
-    <img src= "../public/images/PokemonLog.png" alt="Pokemon Logo" />
+    
+    <div className="app--div">
+    <img 
+      className = "pokemon--logo"
+      src= {PokemonLogo}
+      alt = "Pokemon Logo" 
+    />
+
+     <DisplayPokemon />
+     <ErrorHandling />
+  
+     </div>
   );
 
 }
 
-export default App;
 
-
+//  <DisplayPokemon />
+//  <ErrorHandling />
 
 
