@@ -11,18 +11,19 @@ export default function Pokemon ({pokemon}) {
 
     if (data) {
     return (
-                <div>
-                    <span>#{data.id}</span>
+                <div className='card'>
+                    <span className='card-id'>#{data.id}</span>
                     <img
+                        className='card-sprite'
                         src={data.sprites.front_default}
                         alt={name}
                     />
-                    <h2>{name}</h2>
-                    <span>
+                    <h2 className='card-name'>{name}</h2>
+                    <span className='card-details'>
                         <h3>
                             <i>Type</i>
                         </h3>
-                        <ul>
+                        <ul className='types-list'>
                             {data.types.map((pokemon) => (
                                 <li key={pokemon.type.name}>
                                     {pokemon.type.name.toUpperCase()}

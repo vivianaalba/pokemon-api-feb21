@@ -52,20 +52,16 @@ export default function App() {
   }
 };
 
+return (
+  <div>
+    <img
+     className = "pokemon--logo"
+     src= {PokemonLogo}
+     alt = "Pokemon Logo"
+   />
 
-  
-  return (
-    <div className="App">
-      <h1>Pokemon API</h1>
-      <img
-       className = "pokemon--logo"
-       src= {PokemonLogo}
-       alt = "Pokemon Logo"
-     />
-
-
-     <DisplayPokemon />
-     <ErrorHandling />
-    </div>
-  );
+   <DisplayPokemon />
+   <ErrorHandling />
+  </div>
+);
 }
