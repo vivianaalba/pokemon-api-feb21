@@ -30,7 +30,7 @@ export default function App() {
            // <h2>{result.name}</h2>
            data.results.map((pokemon) => {
              return (
-              <Pokemon key={pokemon.name} pokemon={pokemon} />
+              <Pokemon key={[pokemon.name]} pokemon={pokemon} />
              );
            })
          }

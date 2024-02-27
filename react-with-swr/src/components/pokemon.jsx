@@ -3,16 +3,14 @@ import useRequest from '../hooks/useRequest';
 
 export default function Pokemon ({pokemon}) {
     const { name } = pokemon;
-    const { data, error } = useRequest('/pokemon/${name}');
+    const { data, error } = useRequest('pokemon', name);
 
-    if (!data) return <h2>Loading...</h2>
+    if (!data)  return <h2>Loading...</h2>
 
     if (error) return <div>{error}: There was an error with getting data</div>;
 
-
+    if (data) {
     return (
-        <div>
-            {data && (
                 <div>
                     <span>#{data.id}</span>
                     <img
@@ -33,8 +31,7 @@ export default function Pokemon ({pokemon}) {
                         </ul>
                     </span>
                 </div>
-            )}
-        </div>
-    );
+    )
+    }
     
 }
