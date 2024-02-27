@@ -4,6 +4,7 @@ import React from 'react'
 import './styles/App.css'
 import PokemonLogo from '/images/PokemonLogo.png'
 import useRequest from './hooks/useRequest'
+import Pokemon from './components/pokemon';
 
 export default function App() {
 
@@ -29,7 +30,7 @@ export default function App() {
            // <h2>{result.name}</h2>
            data.results.map((pokemon) => {
              return (
-               <h2 key={pokemon.name}>{pokemon.name}</h2>
+              <Pokemon key={pokemon.name} pokemon={pokemon} />
              );
            })
          }
@@ -64,8 +65,7 @@ export default function App() {
 
 
      <DisplayPokemon />
+     <ErrorHandling />
     </div>
   );
 }
-
-// <ErrorHandling />
