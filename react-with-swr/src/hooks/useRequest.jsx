@@ -1,9 +1,11 @@
-import useSWR from 'swr'
+import useSWR from 'swr';
+
+
+const baseUrl = "https://pokeapi.co/api/v2";
 
 // Accepts a path provided by the API
 // if the path is /pokemon, also need a name of the Pokemon to access its details
 export default function useRequest(path, name) {
-    const baseUrl = "https://pokeapi.co/api/v2/";
 
     if (!path) {
         throw new Error('Path is required');
