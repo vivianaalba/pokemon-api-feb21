@@ -1,10 +1,11 @@
 console.log('Is this thing on?');
 
-import React from 'react'
-import './styles/App.css'
-import PokemonLogo from '/images/PokemonLogo.png'
-import useRequest from './hooks/useRequest'
+import React from 'react';
+import './styles/App.css';
+import PokemonLogo from '/images/PokemonLogo.png';
+import useRequest from './hooks/useRequest';
 import Pokemon from './components/pokemon';
+import AudioPlayer from './components/AudioPlayer';
 
 export default function App() {
 
@@ -53,13 +54,14 @@ export default function App() {
 };
 
 return (
-  <div>
+  <div className='logo--wrapper'>
     <img
      className = "pokemon--logo"
      src= {PokemonLogo}
      alt = "Pokemon Logo"
    />
-
+  
+   <AudioPlayer />
    <DisplayPokemon />
    <ErrorHandling />
   </div>

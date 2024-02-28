@@ -11,10 +11,18 @@ body,
 /* General Styles */
 .pokemon--logo {
   height: 30vh;
+  max-width: 50%;
   display: flex;
   align-content: center;
   justify-content: center;
   display: flex;
+}
+
+.logo--wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .app--div {
@@ -51,7 +59,7 @@ body,
 }
 
 .card {
-  width: 20vw;
+  max-width: 25vw;
   height: 35vh;
   background-color: antiquewhite;
   box-shadow: 7px 10px rgba(178, 37, 12, 0.65);
@@ -116,4 +124,29 @@ h3 {
 .card-name {
   font-size: 20px;
   font-family: 'Sixtyfour', sans-serif; /* Correct font-family syntax */
+}
+
+.play-button {
+  background-color: black;
+  margin: 0;
+  margin-bottom: 10%;
+  width: 80px;
+  height: 35px;
+  border-radius: 70%;
+  color: white;
+  box-shadow: 2px 3px rgba(72, 15, 5, 0.65);
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 1%;
+}
+
+.audio-player{
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.volume-warning {
+  margin: 2%;
+  font-weight: 700;
 }

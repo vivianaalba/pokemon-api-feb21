@@ -1,7 +1,10 @@
 import themeSong from '../audio/theme.mp3';
 import { useEffect, useState } from 'react';
 
-export default function usePlayer() {
+export default function AudioPlayer() {
+
+  // custom hook
+  function usePlayer() {
     const [audio] = useState(new Audio(themeSong));
     const [playing, setPlaying] = useState(false);
 
@@ -24,10 +27,10 @@ export default function usePlayer() {
     });
 
     return [playing, toggle];
-}
+  }
 
-function Player() {
-    const [playing, toggle] = useAudio(themeSong);
+  function Player() {
+    const [playing, toggle] = usePlayer(themeSong);
 
     return (
     <div className="audio-player">
@@ -40,4 +43,8 @@ function Player() {
         <br />
     </div>
     );
+  }
+
+return <Player />
+
 }
