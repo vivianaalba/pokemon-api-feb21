@@ -25,7 +25,7 @@ export default function App() {
  const DisplayPokemon = () => {
    if(data) {
      return (
-       <div>
+       <div className='row'>
          {
            // <h2>{result.name}</h2>
            data.results.map((pokemon) => {
