@@ -35,7 +35,7 @@ export default function AudioPlayer() {
     return (
     <div className="audio-player">
         <button className="play-button" onClick={toggle}>
-        {playing ? 'Pause' : 'Play'}
+        {playing ? 'Pause' : 'Play Music'}
         </button>
         <span className="audio-notif">
         {playing ? '♪ audio playing  ♪' : ''}

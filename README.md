@@ -1,11 +1,12 @@
 # pokemon-api-feb21
 ## About
-<br>react-with-swr is a project that was set up with vite and react. It is a pokemon database, which requests pokemone data, including name, type, and photo, from an api. This app is intended for educational purposes and safely requests data from an external site. Styling included to improve UI.
-<br>App is also supposed to have music in the background. However, I was unable to make the audio run without breaking the application. I will cotninue working on this on the side to make sure that I know how to do this.
+<br>This project is a Pokémon database application that retrieves Pokémon data, such as names, types, and images, from an external API. Through seamless integration with the API, users can explore a collection of Pokemon, enriching their knowledge and fandom of the franchise. 
+<br>Designed with safety in mind, the app securely fetches the latest Pokémon data from an API.  Styling enhancements have been incorporated to elevate the user interface, ensuring an engaging experience for all ages. Additionally, background music has been integrated into the application to enrich user engagement, creating an immersive and enjoyable environment with the click of a button as users explore the world of Pokémon.
 
 ## Technologies
 <br>Tech: Javascript, HTML, CSS
-<br>Packages: vite, react, axios, swr, react-dom
+<br>Libraries: react, axios, swr, react-dom
+<br>Tools: vite
 
 ### Getting started
 <br> cd react-with-swr
